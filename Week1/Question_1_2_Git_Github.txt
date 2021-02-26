@@ -1,0 +1,50 @@
+#2. Here are a few git and GitHub commands we usually use in software development, please explain the meanings and use cases of them.
+
+● git status 顯示當前 Respository 的狀態
+  ex: 此命令可以顯示出所有檔案的不同狀態，像是檔案被修改了，但尚未提交，或新檔案還未設定追蹤。
+
+● git add 後面接 [file] ，即可將指定的檔案存到 Staging Area
+  ex: git add . 將當前目錄的所有檔案都加到 Staging Area。
+
+● git commit 程式碼提交
+  ex: git commit -m [message] 提交程式碼到 Respository。  
+
+● git log 顯示目前正在使用的分支版本歷史
+  ex: git log -4 --oneline 顯示當前的分支 近 4 次修改記錄，各以一行總結。
+
+● git push [ Repo_name ] [ Branch_name ]  上傳本地分支到遠端的 Respository
+  ex: 可以使用 --set-upstream 設定一個「上游」，即可指向並 track 某個分支。
+
+● git remote -v 顯示所有遠端的 Respository 
+  ex: git remote show [remote] 僅顯示某個指定的遠端倉庫資訊。
+
+● git branch 查看目前分支有哪些
+  ex: git checkout -b [branch-name] 新建一個分支，並切換到這個新分支。
+
+● fork 在 Github 上看到別人專案的遠端儲存庫內容，然後 fork (叉/複製) 一份到自己的遠端儲存庫
+  ex: fork 對於多人合作一專案很有幫助。將共同合作的專案 fork 回來，然後git clone 回自己的本地端，便可建立新的版本，最後可以使用 pull request 把新版本合併回去。
+
+
+
+#Please describe how to establish a github repo and how to upload the local projects to github. Try to explain it as detail as possible.
+
+<How to establish a github repo?>
+
+1. 到 GitHub 網站上登入自己的帳號
+2. 在頁面右上角的下拉式選單，點擊 Your Respositories，然後點綠色的 New 按鈕建立新的 Respository。  
+3. 輸入 Respository 的名稱、描述和其他設定選好，ex: private/ public，需要建立 README/ LICENSE 
+4. 設定完畢後，按下「Create Repository 」，便設定完畢。
+
+<How to upload the local projects to github?>
+
+1. 打開電腦裡的 Terminal
+2. git init -b main 將本地目錄初始化。
+3. git add . 將文件添加到新的本地 Repository。 
+4. git commit -m [message] 提交程式碼到 Respository。
+5. 前往 GitHub 複製想要 remote 的 Repository's URL
+6. 回到 Terminal 輸入：git remote add origin  [REMOTE_URL] 
+7. git remote -v 驗證新的 remote URL
+8. git push -u origin main 將本地建立的新版本推到遠端分支
+
+Done!
+
